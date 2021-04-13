@@ -1,0 +1,18 @@
+.search_box {
+  border: 1px solid green;
+  border-left: 10px;
+  font-size: 17px;
+  padding: 2px;
+  width: 80px;
+  border-radius: 5px 0px 0px 5px;
+}
+.search_button {
+  width: 30px;
+  height: 26.5px;
+  border: 1px solid green;
+  border-radius: 0px 5px 5px 0px;
+}
+.search_box:focus,
+.search_button:focus {
+  outline-width: 0;
+}

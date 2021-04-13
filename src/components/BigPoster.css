@@ -1,0 +1,43 @@
+.big_poster_img_class {
+  width: 100%;
+  position: relative;
+  height: 650px;
+  background-position: center;
+  object-fit: cover;
+  z-index: -1;
+}
+.big_poster_img_container_class {
+  position: relative;
+}
+.poster_text {
+  position: absolute;
+  width: 100%;
+  top: 430px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+.poster_title {
+  color: wheat;
+  font-size: 50px;
+}
+.fade_bottom {
+  position: absolute;
+  top: 430px;
+
+  height: 220px;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(19, 19, 19, 0.75),
+    rgb(0, 0, 0)
+  );
+}
+.poster_overview {
+  width: 400px;
+  text-align: justify;
+  color: white;
+  font-size: 19px;
+  line-height: 20px;
+}

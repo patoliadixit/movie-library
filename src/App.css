@@ -25,6 +25,9 @@
 .App-link {
   color: rgb(112, 76, 182);
 }
+.wow{
+  font: all-petite-cap;
+}
 
 @keyframes App-logo-float {
   0% {

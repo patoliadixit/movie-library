@@ -1,0 +1,38 @@
+.loading {
+  font-size: 300px;
+  text-align: center;
+  color: pink;
+}
+.small_loading {
+  font-size: 100px;
+  text-align: center;
+  color: pink;
+}
+.movie_list {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px 0;
+  align-items: center;
+  height: 350px;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.button_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.load_more_button {
+  font-size: 40px;
+}
+.title_class {
+  color: wheat;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding-left: 10px;
+}
