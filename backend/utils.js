@@ -149,4 +149,16 @@ const big_poster = async () => {
   let result = await axios.get(url, { params: { with_networks: 213, api_key } })
   return result.data.results
 }
-module.exports = { big_poster, homepage_data_get, movies_by_genre }
+const movie_details_get = async ({ id }) => {
+  let url = `https://api.themoviedb.org/3/movie/${id}`
+  let result = await axios.get(url, { params: { api_key } })
+  return result.data
+
+}
+const search_details = async ({ key_word }) => {
+  let url = 'https://api.themoviedb.org/3/search/movie?'
+  let result = await axios.get(url, { params: { api_key, query: key_word } })
+  return result.data
+
+}
+module.exports = { search_details, movie_details_get, big_poster, homepage_data_get, movies_by_genre }

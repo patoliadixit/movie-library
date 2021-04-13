@@ -4,9 +4,10 @@ import "./BigPoster.css"
 
 function BigPoster() {
   const [movie, setMovie] = useState([]);
-  let uurl = 'http://104.236.110.205/bigposter'
+  let url = 'http://localhost:5000/bigposter'
+  url = 'http://104.236.110.205/bigposter'
   useEffect(async () => {
-    axios.get(uurl || 'http://localhost:5000/bigposter')
+    axios.get(url)
       .then(res => {
         let p = res.data[Math.floor(Math.random() * res.data.length)]
         setMovie(p)

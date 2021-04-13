@@ -23,7 +23,7 @@ function MovieCard({ movie }) {
         <div className="poster">
           <img className="img_class" src={`${base_url}${movie.poster_path}` || `${base_url}${movie.backdrop_path}`} alt={movie.title} />
         </div>
-        {expanded ? <div className="movie_title rating_class" ><span>{`Rating:${movie.vote_average}`}</span><span>{`Votes:${movie.vote_count}`}</span></div> : <div>" "</div>}
+        {expanded ? <div className="movie_title rating_class" ><span>{`Rating:${movie.vote_average}`}</span><span>{`Votes:${movie.vote_count}`}</span></div> : <br />}
       </div>
     </>
   )

@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import API_KEY from './../env.js'
 
 function MovieFullPage() {
   let { id } = useParams()
-  const url = "https://api.themoviedb.org/3/movie/"
+  let url = "http://localhost:5000/movie/"
+  url = 'http://104.236.110.205/movie/'
   const [movieDetails, setMovieDetails] = useState({});
-  const api_key = API_KEY
   const base_url = 'https://image.tmdb.org/t/p/w342';
   useEffect(() => {
-    axios.get(`https://api.themoviedb.org/3/movie/${id}`,
-      {
-        params: {
-          api_key
-        }
-      })
+    axios.get(`${url}${id}`)
       .then(res => {
         return setMovieDetails(res.data)
       })

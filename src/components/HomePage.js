@@ -6,13 +6,13 @@ import BigPoster from './BigPoster'
 import MovieCard from './MovieCard'
 import './HomePage.css'
 function HomePage() {
-  let uurl = 'http://104.236.110.205/homepage'
-
+  let url = 'http://localhost:5000/homepage'
+  url = 'http://104.236.110.205/homepage'
   const [movie_list, setMovie_list] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    axios.get(uurl || 'http://localhost:5000/homepage', { params: { page } })
+    axios.get(url, { params: { page } })
       .then(res => {
         setPage(prv => prv + 1)
         setMovie_list(res.data)
@@ -20,7 +20,7 @@ function HomePage() {
   }, [])
   const loadMoreHandler = (event) => {
     setLoading(true)
-    axios.get(uurl || 'http://localhost:5000/homepage', { params: { page } })
+    axios.get(url, { params: { page } })
       .then(res => {
         setLoading(false)
         setPage(prv => prv + 1)
