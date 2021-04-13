@@ -20,7 +20,6 @@ function App() {
           <Route exact path="/genre/:genre/">
             <Results />
           </Route>
-
           <Route exact path="/search/:query">
             <SearchPage />
           </Route>

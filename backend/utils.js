@@ -145,7 +145,7 @@ const homepage_data_get = async ({ page }) => {
   return data_get
 }
 const big_poster = async () => {
-  let url = 'https://api.themoviedb.org/3/discover/tv/'
+  let url = 'https://api.themoviedb.org/3/discover/movie/'
   let result = await axios.get(url, { params: { with_networks: 213, api_key } })
   return result.data.results
 }
