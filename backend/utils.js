@@ -107,7 +107,6 @@ const movies_by_genre = async ({ genre, page }) => {
     return genre_get.data.results
   }
   let genre_id = genre_list.find(elem => elem.name === genre).id
-  console.log(genre_id)
   let genre_get = await axios.get(`https://api.themoviedb.org/3/discover/movie?&with_genres=${genre_id}`, { params: { api_key } })
   return genre_get.data.results
 }

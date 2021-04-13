@@ -8,7 +8,6 @@ function MovieFullPage() {
   const url = "https://api.themoviedb.org/3/movie/"
   const [movieDetails, setMovieDetails] = useState({});
   const api_key = API_KEY
-  console.log(API_KEY)
   const base_url = 'https://image.tmdb.org/t/p/w342';
   useEffect(() => {
     axios.get(`https://api.themoviedb.org/3/movie/${id}`,
@@ -18,7 +17,6 @@ function MovieFullPage() {
         }
       })
       .then(res => {
-        console.log(res.data)
         return setMovieDetails(res.data)
       })
   }, [])

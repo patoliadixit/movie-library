@@ -7,7 +7,6 @@ function MovieCard({ movie }) {
   let a = "/movie/" + movie.id
   const mouseOver = (event) => {
     setExpanded(true)
-    console.log("mouseover")
   }
   const mouseLeave = (event) => {
     setExpanded(false)

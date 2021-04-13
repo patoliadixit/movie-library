@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import "./BigPoster.css"
+
 function BigPoster() {
   const [movie, setMovie] = useState([]);
+  let uurl = 'http://104.236.110.205/bigposter'
   useEffect(async () => {
-    axios.get('http://localhost:5000/bigposter')
+    axios.get(uurl || 'http://localhost:5000/bigposter')
       .then(res => {
         let p = res.data[Math.floor(Math.random() * res.data.length)]
-        console.log(p)
         setMovie(p)
       })
   }, [])

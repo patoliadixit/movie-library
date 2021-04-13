@@ -14,7 +14,6 @@ function SearchPage() {
       .then(res => {
         return setMovie_list(res.data.results)
       })
-    console.log("search")
   }, [query])
   return (
     <div>
