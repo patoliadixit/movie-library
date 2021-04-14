@@ -12,9 +12,14 @@
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding: 20px 0;
+  padding-left: 25px;
+  padding-right: 25px;
   align-items: center;
   height: 350px;
+  position: relative;
+  z-index: 100;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .scroll-container::-webkit-scrollbar {
   display: none;
@@ -31,8 +36,12 @@
   color: wheat;
   width: fit-content;
   padding: 0;
+  font-size: xx-large;
   margin: 0;
+  text-decoration: none;
 }
 .container {
   padding-left: 10px;
+  position: relative;
+  /* z-index: -1; */
 }

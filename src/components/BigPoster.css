@@ -11,7 +11,8 @@
 }
 .poster_text {
   position: absolute;
-  width: 100%;
+  /* width: 100%; */
+  padding-left: 25px;
   top: 430px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;

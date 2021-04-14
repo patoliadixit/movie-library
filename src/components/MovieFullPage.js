@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-
+import "./MovieFullPage.css"
+import URL from './urls'
 function MovieFullPage() {
   let { id } = useParams()
-  let url = "http://localhost:5000/movie/"
-  url = 'http://104.236.110.205/movie/'
+  let url = `${URL}/movie/`
   const [movieDetails, setMovieDetails] = useState({});
-  const base_url = 'https://image.tmdb.org/t/p/w342';
   useEffect(() => {
     axios.get(`${url}${id}`)
       .then(res => {
@@ -15,7 +14,7 @@ function MovieFullPage() {
       })
   }, [])
   return (
-    <div>
+    <div className="full_page_container">
       <img src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path || movieDetails.backdrop_path}`} />
     </div>
   )

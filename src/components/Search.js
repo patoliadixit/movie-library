@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import "./Search.css"
-import SearchIcon from '@material-ui/icons/Search';
-import TextField from '@material-ui/core/TextField'
-import { Button, ButtonBase, IconButton } from '@material-ui/core';
 function Search(props) {
   const history = useHistory()
   const [searchField, setSearchField] = useState("");
   const onSubmitForm = (event) => {
     event.preventDefault()
+    setSearchField("")
     history.push(`/search/${searchField}`)
   }
   const onChangeSearchField = (event) => {
