@@ -10,8 +10,8 @@
   position: relative;
 }
 .poster_text {
+  width: 90%;
   position: absolute;
-  /* width: 100%; */
   padding-left: 25px;
   top: 430px;
   font-weight: bold;
@@ -24,7 +24,6 @@
 .fade_bottom {
   position: absolute;
   top: 430px;
-
   height: 220px;
   width: 100%;
   z-index: -1;
@@ -41,4 +40,21 @@
   color: white;
   font-size: 19px;
   line-height: 20px;
+}
+@media screen and (max-width: 600px) {
+  .big_poster_img_class {
+    height: 400px;
+  }
+  .poster_text {
+    top: 180px;
+  }
+  .poster_overview {
+    width: 100%;
+  }
+  .fade_bottom {
+    top: 180px;
+  }
+  .poster_title {
+    font-size: 30px;
+  }
 }

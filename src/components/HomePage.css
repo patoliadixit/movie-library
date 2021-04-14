@@ -1,5 +1,5 @@
 .loading {
-  font-size: 300px;
+  font-size: 200px;
   text-align: center;
   color: pink;
 }
@@ -44,4 +44,12 @@
   padding-left: 10px;
   position: relative;
   /* z-index: -1; */
+}
+@media screen and (max-width: 600px) {
+  .movie_list {
+    padding: 0;
+  }
+  .loading {
+    font-size: 100px;
+  }
 }

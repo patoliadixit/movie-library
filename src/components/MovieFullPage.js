@@ -10,13 +10,22 @@ function MovieFullPage() {
   useEffect(() => {
     axios.get(`${url}${id}`)
       .then(res => {
+        console.log(res.data)
         return setMovieDetails(res.data)
       })
   }, [])
   return (
     <div className="full_page_container">
-      <img src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path || movieDetails.backdrop_path}`} />
-    </div>
+      <img className="full_page_poster" src={`https://image.tmdb.org/t/p/w342${movieDetails.poster_path || movieDetails.backdrop_path}`} />
+      <div className="movie_info">
+        <div>Name: {movieDetails.title}</div>
+        <div>Tagline: {movieDetails.tagline}</div>
+        <div>Rating: {movieDetails.vote_average}   (Number Of Votes: {movieDetails.vote_count})</div>
+        <div className="movie_description">Description: {movieDetails.overview}</div>
+        <div>Language: {movieDetails.original_language}</div>
+        <div>Release Date: {movieDetails.release_date}</div>
+      </div>
+    </div >
   )
 }
 
